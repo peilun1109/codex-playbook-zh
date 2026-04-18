@@ -1,20 +1,20 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { SectionNav } from "@/components/section-nav";
-import { roadmapLevels } from "@/data/site-content";
+import { roadmapLevels } from "@/data/content-v2";
 
 export default function RoadmapPage() {
   return (
     <div className="space-y-8">
       <PageHero
         eyebrow="學習路線圖"
-        title="把能力拆成五個等級，從會問到會協作"
-        intro="如果你現在還停留在『請 AI 幫我寫 code』，這條路線圖會幫你往前走。每一層都包含學習目標、要學會的能力、常見卡點與建議練習方式，讓你逐步把 Codex 納入日常工程流程。"
+        title="這條路線圖從懂名詞開始，最後走到能設計完整代理 workflow"
+        intro="如果你現在覺得網路上很多 Codex 教學都在談 prompt，卻沒有把 AGENTS.md、MCP、Skills、Apps 的層次講清楚，這頁就是為了補這個洞。"
         stats={[
-          { label: "能力等級", value: "5 個 Level" },
-          { label: "學習主線", value: "指令 → 分析 → 修改 → 協作" },
-          { label: "核心習慣", value: "先證明，再相信" },
-          { label: "練習方式", value: "小任務反覆迭代" }
+          { label: "學習層級", value: "5 個 Level" },
+          { label: "中段重點", value: "AGENTS.md / MCP" },
+          { label: "後段重點", value: "代理 workflow" },
+          { label: "目標", value: "讓流程可重複" }
         ]}
       />
 
@@ -57,16 +57,16 @@ export default function RoadmapPage() {
           ))}
 
           <section className="section-card p-6 sm:p-8">
-            <h2 className="section-title">下一步建議</h2>
+            <h2 className="section-title">推薦下一步</h2>
             <p className="section-copy mt-4">
-              如果你已經能穩定做到 Level 3，最值得投入的是建立自己的 reusable prompts 與 repo 規則。這會讓你從「偶爾用得好」進化成「持續用得穩」。
+              如果你已經能走到 Level 3，最值得做的不是再找更多 prompt，而是替你的 repo 補 AGENTS.md，並讓常用 GitHub / 文件查詢能力有固定入口。這會讓 Codex 的穩定度提升非常多。
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/prompts" className="rounded-full border border-slate-700 px-4 py-2 text-sm text-white">
-                查看 Prompt 模板
+              <Link href="/overview" className="rounded-full border border-slate-700 px-4 py-2 text-sm text-white">
+                回到概念與分工
               </Link>
               <Link href="/playbooks" className="rounded-full border border-slate-700 px-4 py-2 text-sm text-white">
-                進入實戰案例
+                看實戰案例
               </Link>
             </div>
           </section>

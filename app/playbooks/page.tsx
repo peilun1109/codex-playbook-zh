@@ -1,15 +1,15 @@
-import { PromptCard } from "@/components/prompt-card";
+﻿import { PromptCard } from "@/components/prompt-card";
 import { SectionNav } from "@/components/section-nav";
 import { PageHero } from "@/components/page-hero";
-import { playbooks } from "@/data/site-content";
+import { playbooks } from "@/data/content-v2";
 
 export default function PlaybooksPage() {
   return (
     <div className="space-y-8">
       <PageHero
         eyebrow="實戰案例"
-        title="用真實工程情境練 Codex，而不是停留在抽象技巧"
-        intro="這一頁用五種常見場景示範怎麼把 Codex 用進實際工作：修 bug、加新功能、重構舊程式、讀陌生 repo，以及送 PR 前的最後檢查。每個案例都依照『問題 → 好的操作方式 → prompt 範本 → 驗證方式』展開。"
+        title="這次的案例不只講改 code，而是講代理如何進入工作流"
+        intro="我把案例重寫成更貼近真實工程協作的版本：補 AGENTS.md、用 MCP 讀 PR、釐清 Skills / Plugins / Apps 的分工、接手陌生 repo、完成最後交付。"
       />
 
       <div className="content-grid">
@@ -49,7 +49,7 @@ export default function PlaybooksPage() {
               </div>
 
               <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-950/30 p-5">
-                <h3 className="text-lg font-semibold text-white">如何驗證修復或實作成功</h3>
+                <h3 className="text-lg font-semibold text-white">如何驗證做得夠好</h3>
                 <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-300">
                   {item.validate.map((point) => (
                     <li key={point}>- {point}</li>

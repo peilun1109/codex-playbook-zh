@@ -1,15 +1,15 @@
-import { PromptCard } from "@/components/prompt-card";
+﻿import { PromptCard } from "@/components/prompt-card";
 import { SectionNav } from "@/components/section-nav";
 import { PageHero } from "@/components/page-hero";
-import { overviewSections } from "@/data/site-content";
+import { overviewSections } from "@/data/content-v2";
 
 export default function OverviewPage() {
   return (
     <div className="space-y-8">
       <PageHero
         eyebrow="技巧總覽"
-        title="把 Codex 用穩的關鍵，不是更花的 prompt，而是更工程化的操作方式"
-        intro="這一頁把使用 Codex 的核心能力拆成六大章節：基礎使用、prompt 設計、codebase 理解、修改與重構、驗證，以及日常協作。每個章節都包含核心概念、重要性、實作建議、可直接複製的 prompt 與常見錯誤。"
+        title="先把規則、能力、流程分清楚，再談怎麼把 Codex 用好"
+        intro="這一頁直接收斂到五件事：AGENTS.md 怎麼限制與引導代理、MCP 怎麼提供上下文與工具能力、Skills / Plugins / Apps 怎麼分工、修改前怎麼分析，以及最後怎麼驗證與交付。"
       />
 
       <div className="content-grid">
